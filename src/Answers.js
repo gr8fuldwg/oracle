@@ -8,7 +8,7 @@ class Answer extends React.Component {
       case 0:
         return "It is certain";
       case 1:
-        return "I am afraid that ye ol' peon is flooded with questions I no longer wish to provide enlightenment on.     ~~~~ Good day ~~~~";
+        return "I am afraid that ye ol' peon is flooded with questions I no longer wish to provide enlightenment on.  ~~~~ Good day ~~~~";
       case 2:
         return "Reply hazy....try again.";
       case 3:

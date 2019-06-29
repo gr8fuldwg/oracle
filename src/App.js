@@ -1,29 +1,23 @@
-import React, { component } from "react";
+import React from "react";
 import "./App.css";
-import Question from "./Questions";
-import Answer from "./Answers";
+// import Question from "./Questions";
+// import Answer from "./Answers";
+import Nav from "./Nav";
+import About from "./About";
+import Thing from "./Thing";
+import Oracle from "./Oracle";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <body className="body d-flex text-center">
-      <div className="container">
-        <div className="App container-fluid">
-          <div className="question">
-            <h1>
-              <Question />
-            </h1>
-          </div>
-        </div>
-
-        <div className="answer d-flex text-center">
-          <h1>
-            <blockquote>
-              <Answer className="text-center" />
-            </blockquote>
-          </h1>
-        </div>
+    <Router>
+      <div>
+        <Nav />
+        <Route path="/about" component={About}/>
+        <Route path="/Oracle" component={Oracle}/>
+        <Route path="/Thing" component={Thing}/>
       </div>
-    </body>
+    </Router>
   );
 }
 
