@@ -29,7 +29,6 @@ class Answer extends React.Component {
   render() {
     return (
       <div>
-        Oracle!!
         {this.renderSwitch(randomNumber)}
       </div>
     );

@@ -1,0 +1,30 @@
+.body {
+  background-color: rgb(59, 58, 58);
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+.App {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding-top: 3rem; 
+}
+
+.question {
+  color: black;
+  font-size: 30px;
+  line-height: 20vh;
+  font-weight: 400;
+
+}
+
+.answer {
+  color: white;
+  padding-top: 5rem;
+  font-size: 30px;
+  line-height: 50vh;
+  font-weight: 400;
+}

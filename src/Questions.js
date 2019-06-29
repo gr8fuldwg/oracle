@@ -6,7 +6,7 @@ import React from "react";
 
 const userQuestion = Math.floor(Math.random() * 6);
 
-class Thing extends React.Component {
+class Question extends React.Component {
   renderSwitch(userQuestion) {
     switch (userQuestion) {
       case 0:
@@ -32,11 +32,12 @@ class Thing extends React.Component {
   render() {
     return (
       <div>
-        Oracle!!
+        Oh wise one...
+        <br />
         {this.renderSwitch(userQuestion)}
       </div>
     );
   }
 }
 
-export default Thing;
+export default Question;
