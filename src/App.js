@@ -13,12 +13,21 @@ function App() {
     <Router>
       <div>
         <Nav />
-        <Route path="/about" component={About}/>
-        <Route path="/Oracle" component={Oracle}/>
-        <Route path="/Thing" component={Thing}/>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/Oracle" component={Oracle} />
+          <Route path="/Thing" component={Thing} />
+        </Switch>
       </div>
     </Router>
   );
 }
+
+const Home = () => (
+  <div>
+    <h2>Home Page</h2>
+  </div>
+);
 
 export default App;
