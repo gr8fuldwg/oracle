@@ -3,7 +3,6 @@ import "./App.css";
 import Question from "./Questions";
 import Answer from "./Answers";
 
-
 function Oracle() {
   return (
     <div className="Oracle">
@@ -27,7 +26,7 @@ function Oracle() {
         </div>
       </body>
     </div>
-   );
+  );
 }
 
 export default Oracle;

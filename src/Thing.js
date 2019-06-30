@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "./App.css";
 import Answer from "./Answers";
+import { Form } from 'reactstrap';
 
 class Thing extends React.Component {
   constructor(props) {
     super(props);
     this.state = { show: false };
-
     this.answer = this.answer.bind(this);
-  }
+  };
 
   answer = () => {
     const { show } = this.state;
@@ -17,37 +17,47 @@ class Thing extends React.Component {
 
   render() {
     return (
-      <div className="Thing">
-        <div className="input-group mb-3">
-          <div className="input-group-prepend">
-            <button
-              onClick={this.answer}
-              className="btn btn-outline-secondary"
-              type="button"
-              id="button-addon1"
-            >
-              Ask The Oracle
-            </button>
-            
+      <div className="thing-question">
+        <Form className="needs-validation" novalidate>
+          <div class="form-group">
+            <label for="validationCustom01">The Oracle eagerly awaits</label>
+            <input
+              type="text"
+              className="form-control"
+              id="validationCustom01"
+              placeholder="Ask the Oracle anything you wish..."
+              minlength="3"
+              required
+            />
+            <div className="valid-feedback">Looks good!</div>
+            <div className="invalid-feedback">Please don't keep the Oracle in suspense. Ask away...</div>
           </div>
-          <input
-            type="text"
-            className="form-control"
-            placeholder=""
-            aria-label="Example text with button addon"
-            aria-describedby="button-addon1"
-          />
+        </Form>
+
+        <br />
+
+        <div className="input-group-prepend justify-content-center">
+          <button 
+            onClick={ this.answer }
+            className="btn btn-outline-secondary "
+            type="button"
+          >
+            Submit to Oracle
+          </button>
         </div>
-        {this.state.show && <Box />}
+
+        <div className="d-flex justify-content-center">
+          {this.state.show && <Response />}
+        </div>
       </div>
     );
   }
 }
 
-class Box extends Component {
+class Response extends Component {
   render() {
     return (
-      <blockquote>
+      <blockquote className="response">
         <Answer className="text-center" />
       </blockquote>
     );
