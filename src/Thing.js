@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import "./App.css";
-import Answer from "./Answers";
-import { Form } from 'reactstrap';
+import ThingAnswer from "./ThingAnswers";
+import { Form } from "reactstrap";
 
-class Thing extends React.Component {
+class Thing extends Component {
   constructor(props) {
     super(props);
-    this.state = { show: false };
+    this.state = {
+      show: false
+    };
     this.answer = this.answer.bind(this);
-  };
+  }
 
   answer = () => {
     const { show } = this.state;
@@ -21,6 +23,7 @@ class Thing extends React.Component {
         <Form className="needs-validation" novalidate>
           <div class="form-group">
             <label for="validationCustom01">The Oracle eagerly awaits</label>
+
             <input
               type="text"
               className="form-control"
@@ -30,15 +33,17 @@ class Thing extends React.Component {
               required
             />
             <div className="valid-feedback">Looks good!</div>
-            <div className="invalid-feedback">Please don't keep the Oracle in suspense. Ask away...</div>
+            <div className="invalid-feedback">
+              Please don't keep the Oracle in suspense. Ask away...
+            </div>
           </div>
         </Form>
 
         <br />
 
         <div className="input-group-prepend justify-content-center">
-          <button 
-            onClick={ this.answer }
+          <button
+            onClick={this.answer}
             className="btn btn-outline-secondary "
             type="button"
           >
@@ -58,7 +63,7 @@ class Response extends Component {
   render() {
     return (
       <blockquote className="response">
-        <Answer className="text-center" />
+        <ThingAnswer className="text-center" />
       </blockquote>
     );
   }
