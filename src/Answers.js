@@ -1,46 +1,46 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Thing extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { show: false };
-    this.answer = this.answer.bind(this);
-  }
+// class Thing extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = { show: false };
+//     this.answer = this.answer.bind(this);
+//   }
 
-  answer = () => {
-    const { show } = this.state;
-    this.setState({ show: !show });
-  };
+//   answer = () => {
+//     const { show } = this.state;
+//     this.setState({ show: !show });
+//   };
 
-  render() {
-    return (
-      <div className="d-flex justify-content-center">
-        {this.state.show && <Response />}
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <div className="d-flex justify-content-center">
+//         {this.state.show && <Response />}
+//       </div>
+//     );
+//   }
+// }
 
-class Response extends Component {
-  render() {
-    return (
-      <div className="input-group-prepend justify-content-center">
-        <button
-          onClick={this.answer}
-          className="btn btn-outline-secondary "
-          type="button"
-        >
-          Submit to Oracle
-        </button>
+// class Response extends Component {
+//   render() {
+//     return (
+//       <div className="input-group-prepend justify-content-center">
+//         <button
+//           onClick={this.answer}
+//           className="btn btn-outline-secondary "
+//           type="button"
+//         >
+//           Submit to Oracle
+//         </button>
 
-        <blockquote className="response">
-          <Thing />
-          <Answer className="text-center" />
-        </blockquote>
-      </div>
-    );
-  }
-}
+//         <blockquote className="response">
+//           <Thing />
+//           <Answer className="text-center" />
+//         </blockquote>
+//       </div>
+//     );
+//   }
+// }
 
 //--------------------------------
 

@@ -20,16 +20,16 @@ class Thing extends Component {
   render() {
     return (
       <div className="thing-question">
-        <Form className="needs-validation" novalidate>
-          <div class="form-group">
-            <label for="validationCustom01">The Oracle eagerly awaits</label>
+        <Form className="needs-validation" noValidate>
+          <div className="form-group">
+            <label className="d-flex justify-content-center" htmlFor="validationCustom01">The Oracle eagerly awaits</label>
 
             <input
               type="text"
               className="form-control"
               id="validationCustom01"
               placeholder="Ask the Oracle anything you wish..."
-              minlength="3"
+              minLength="3"
               required
             />
             <div className="valid-feedback">Looks good!</div>
