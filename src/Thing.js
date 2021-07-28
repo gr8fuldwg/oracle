@@ -44,7 +44,7 @@ class Thing extends Component {
         <div className="input-group-prepend justify-content-center">
           <button
             onClick={this.answer}
-            className="btn btn-outline-secondary "
+            className="submit btn btn-outline-secondary "
             type="button"
           >
             Submit to Oracle
